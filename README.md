@@ -1,3 +1,3 @@
 # space
-Built With: javascdipt sass
+Built With: javascript sass
 
