@@ -1,0 +1,54 @@
+#bodyHome {
+  @include background("../../images/background-desktop.jpg", right);
+  color: #fff;
+}
+
+.intro {
+  @include flex(space-around, flex-end);
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+
+  h1 {
+    font-family: $secondaryFont;
+    font-size: 9.375rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    padding: 15px 0;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+    color: $primaryColor;
+    font-size: 1.7rem;
+    word-spacing: 10px;
+    letter-spacing: 2px;
+  }
+
+  p {
+    max-width: 450px;
+    color: $primaryColor;
+    font-size: 1.125rem;
+    opacity: 0.8;
+    line-height: 25px;
+    word-spacing: 3px;
+  }
+
+  button {
+    font-family: $secondaryFont;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: #fff;
+    text-transform: uppercase;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: none;
+    transition: all 1s ease;
+
+    &:hover {
+      background-color: $secondaryColor;
+      color: $primaryColor;
+    }
+  }
+}

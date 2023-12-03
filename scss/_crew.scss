@@ -1,0 +1,87 @@
+#bodyCrews {
+  @include background("../../images/background-crew.jpg", center);
+  background-size: cover;
+  color: #fff;
+  // overflow-y: hidden;
+}
+
+.crew {
+  @include flex(space-evenly, flex-start);
+
+  & > div {
+    padding: 0 50px;
+  }
+
+  #title {
+    font-weight: 100;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    word-spacing: 5px;
+    letter-spacing: 4px;
+    padding: 20px 0 80px 0;
+
+    span {
+      font-weight: bold;
+      font-weight: 600;
+      padding-right: 5px;
+      color: $primaryColor;
+      opacity: 0.4;
+    }
+  }
+
+  #job {
+    font-weight: 300;
+    font-size: 2rem;
+    font-family: $secondaryFont;
+    color: $primaryColor;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+
+  #name {
+    font-family: $secondaryFont;
+    font-size: 3.5rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    padding: 30px 0;
+  }
+
+  p {
+    color: $primaryColor;
+    opacity: 0.8;
+    font-size: 1.5rem;
+    max-width: 450px;
+    line-height: 2rem;
+    font-weight: 300;
+  }
+
+  #crewImg {
+    height: 635px;
+    padding: 0 50px;
+  }
+
+  .dots {
+    margin-top: 50px;
+    height: 30px;
+    display: flex;
+
+    div {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $primaryColor;
+      margin-right: 10px;
+      cursor: pointer;
+      opacity: 0.3;
+      transition: 0.25s ease-in;
+
+      &.current {
+        opacity: 1;
+      }
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}

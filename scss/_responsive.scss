@@ -1,0 +1,353 @@
+@include mediaLarge {
+  .tech {
+    #techImg {
+      height: 300px;
+      margin-top: 0;
+    }
+  }
+
+  .crew {
+    @include flex(center, center);
+    flex-direction: column;
+    text-align: center;
+
+    & > div {
+      margin-bottom: 2rem;
+    }
+
+    p {
+      max-width: 600px;
+    }
+
+    #crewImg {
+      height: 500px;
+    }
+
+    .dots {
+      @include flex(center, center);
+    }
+  }
+}
+
+@include mediaMediumLarge {
+  #bodyHome {
+    @include background("../../images/background-desktop.jpg", center);
+  }
+
+  .nav {
+    padding: 20px 0 20px 50px; // top right bottom left
+
+    div:first-of-type {
+      @include flex(space-evenly, center);
+      width: 80%;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .intro {
+    margin-top: 7rem;
+
+    button {
+      font-size: 2rem;
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .destination {
+    @include flex(space-evenly, center);
+    flex-direction: column;
+    margin-top: 3rem;
+    padding: 0 30px;
+
+    ul {
+      @include flex(center, center);
+    }
+
+    div:first-child:not(.avg) {
+      margin-bottom: 5rem;
+    }
+
+    div:last-child {
+      text-align: center;
+      h1 {
+        font-size: 10rem;
+      }
+
+      p {
+        font-size: 2rem;
+        max-width: 600px;
+        line-height: 2rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .tech {
+    & > div {
+      @include flex(center, center);
+      flex-direction: column-reverse;
+    }
+
+    #title {
+      padding: 20px 0 50px 50px;
+    }
+
+    #techImg {
+      height: 450px;
+      width: 80%;
+      margin-bottom: 5rem;
+    }
+
+    .info {
+      padding: 0 30px; // brisi
+      flex-direction: column;
+
+      ul {
+        @include flex(space-around, center);
+        width: 100%;
+        margin-right: 0;
+
+        li {
+          margin-bottom: 50px;
+        }
+      }
+
+      h1 {
+        text-align: center;
+        padding: 30px 0;
+      }
+
+      p {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@include mediaMedium {
+  #bodyHome {
+    @include background("../../images/background-tablet.jpg", center);
+  }
+
+  .nav {
+    padding: 20px 0 20px 30px; // top right bottom left
+
+    img {
+      padding-right: 30px;
+    }
+
+    div:first-of-type {
+      width: 90%;
+    }
+  }
+
+  .intro {
+    @include flex(space-around, center);
+    flex-direction: column;
+    margin-top: 5rem;
+    text-align: center;
+
+    div:first-of-type {
+      margin-bottom: 5rem;
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        max-width: 650px;
+        padding: 0 20px;
+        font-size: 1.5rem;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+@include mediaMediumLow {
+  .nav {
+    padding: 30px 0 20px 30px; // top right bottom left
+
+    .menuBtn {
+      display: block;
+    }
+
+    div:first-of-type {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: $secondaryColor;
+      color: $primaryColor;
+      opacity: 0.9;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        li {
+          margin: 20px 0;
+          font-size: 2rem;
+
+          a {
+            padding: 0;
+          }
+        }
+      }
+
+      &.show {
+        display: block;
+      }
+    }
+  }
+
+  .destination {
+    margin-top: 0;
+
+    div:last-child {
+      text-align: center;
+      h1 {
+        font-size: 6rem;
+        padding: 20px 0;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .tech {
+    #title {
+      padding: 20px 0 50px 30px;
+    }
+
+    #techImg {
+      height: auto;
+      width: 95%;
+    }
+  }
+
+  .crew {
+    #crewImg {
+      height: 400px;
+    }
+  }
+}
+
+@include mediaSmall {
+  .intro {
+    margin-top: 3rem;
+
+    div:first-of-type {
+      h1 {
+        font-size: 6rem;
+        font-weight: 100;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        padding: 0 10px;
+      }
+
+      p {
+        max-width: 450px;
+        font-size: 1.125rem;
+        line-height: 25px;
+      }
+    }
+  }
+
+  .destination {
+    ul {
+      li {
+        margin: 0 10px;
+      }
+    }
+
+    #planetImg {
+      height: 250px;
+    }
+
+    div:first-child {
+      @include flex(space-between, center);
+
+      h1 {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+      }
+    }
+
+    div:last-child {
+      h1 {
+        font-size: 4rem;
+      }
+
+      & div:last-child {
+        @include flex(space-between, flex-start);
+
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .tech {
+    #title {
+      padding: 20px 0 55px 15px;
+    }
+
+    #techImg {
+      margin-bottom: 3rem;
+    }
+
+    .info {
+      ul {
+        li {
+          width: 60px;
+          height: 60px;
+          font-size: 1.5rem;
+          margin-bottom: 30px;
+        }
+      }
+
+      h1 {
+        font-size: 3rem;
+        padding: 20px 0;
+      }
+
+      p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+    }
+  }
+
+  .crew {
+    #name {
+      font-size: 2rem;
+    }
+
+    & > div {
+      padding: 0 20px;
+    }
+
+    #crewImg {
+      height: 280px;
+      padding: 0 20px;
+    }
+  }
+}

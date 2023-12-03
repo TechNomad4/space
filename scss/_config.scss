@@ -1,0 +1,44 @@
+$secondaryColor: #0b0d19;
+$primaryColor: #d0d6f9;
+$primaryFont: "Barlow Condensed", sans-serif;
+$secondaryFont: "Bellefair", serif;
+
+@mixin flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin background($url, $position) {
+  background: $secondaryColor url($url) $position top no-repeat;
+}
+
+@mixin mediaLarge {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin mediaMediumLarge {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin mediaMedium {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaMediumLow {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin mediaSmall {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}

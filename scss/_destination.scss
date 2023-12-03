@@ -1,0 +1,107 @@
+#bodyDest {
+  @include background("../../images/background-destination.jpg", left);
+  color: #fff;
+}
+
+.destination {
+  @include flex(space-evenly, flex-end);
+  margin-bottom: 4rem;
+
+  ul {
+    @include flex(flex-start, center);
+    list-style-type: none;
+    font-weight: 300;
+    text-transform: uppercase;
+
+    li {
+      margin: 0 30px;
+      font-size: 1.3rem;
+      cursor: pointer;
+      color: $primaryColor;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &.active {
+        border-bottom: 3px solid #fff;
+      }
+    }
+  }
+
+  div:first-child {
+    @include flex(space-between, flex-start);
+    flex-direction: column;
+
+    img {
+      height: 400px;
+    }
+
+    h1 {
+      font-weight: 100;
+      font-size: 1.75rem;
+      text-transform: uppercase;
+      word-spacing: 5px;
+      letter-spacing: 4px;
+      padding: 20px 0 60px 0;
+
+      span {
+        font-weight: bold;
+        font-weight: 600;
+        padding-right: 5px;
+        color: $primaryColor;
+        opacity: 0.4;
+      }
+    }
+  }
+
+  div:last-child {
+    h1 {
+      font-family: $secondaryFont;
+      font-size: 6rem;
+      font-weight: 100;
+      text-transform: uppercase;
+      padding: 15px 0;
+    }
+
+    p {
+      color: $primaryColor;
+      opacity: 0.8;
+      font-size: 1.5rem;
+      max-width: 450px;
+      line-height: 2rem;
+      font-weight: 300;
+    }
+
+    .underline {
+      width: 100%;
+      height: 0.5px;
+      opacity: 0.4;
+      margin: 40px 0 25px;
+      background: $primaryColor;
+    }
+
+    & div:last-child {
+      @include flex(space-between, center);
+
+      h3 {
+        font-weight: 300;
+        color: $primaryColor;
+        padding: 10px 0;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        font-weight: 300;
+        font-size: 2rem;
+        font-family: $secondaryFont;
+        text-transform: uppercase;
+      }
+
+      div {
+        @include flex(space-between, flex-start);
+        flex-direction: column;
+      }
+    }
+  }
+}
